@@ -43,7 +43,7 @@
                 <table>
                     <tr>
                         <td>Name:</td>
-                        <td><input type="text" th:field="*{name}" /></td>
+                        <td><input type="text" th:action="@{/}" th:field="*{name}" /></td>
                         <td th:if="${#fields.hasErrors('name')}"><p th:errors="*{name}">Incorrect Name</p></td>
                     </tr>
                     <tr>
@@ -51,7 +51,8 @@
                             <input type="submit" value="Register" />
                         </td>
                     </tr>
-                      <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                   <!--   <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> -->
+                     <input   name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </table>
             </form> 
 		</div>
